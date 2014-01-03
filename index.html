@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Ty: Login</title>
+</head>
+
+<body>
+	<div id="fb-root"></div>
+		<script>
+  			window.fbAsyncInit = function() {
+  				FB.init({
+    				appId      : '183907868473614',
+    				cookie     : true, // enable cookies to allow the server to access the session
+    				xfbml      : true  // parse XFBML
+  				});
+			};
+			
+			 // Load the SDK asynchronously
+  			(function(d){
+   				var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+   				if (d.getElementById(id)) {return;}
+   				js = d.createElement('script'); js.id = id; js.async = true;
+   				js.src = "//connect.facebook.net/en_US/all.js";
+   				ref.parentNode.insertBefore(js, ref);
+  			}(document));
+		</script>
+        
+        <script type="text/javascript">
+      		(function() {
+       			var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+       			po.src = 'https://apis.google.com/js/client:plusone.js';
+       			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+     		})();
+    </script>
+		
+  
+<div id="wrapper">
+    	<header id="top">
+        	<h1>Truly Yours.</h1>
+            <nav id="infoBar">
+            	<ul>
+                	<li><a href="#">About</a></li>
+                    <li><a href="#">Developer</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Other Stuff</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <div id="message">
+        	<p>Say what you need to say to whoever needs to hear it. And mean it.</p>
+            <h4>Truly Yours</h4>
+            <p>-Steeve C. Delius</p>
+        </div>
+        
+        <div id="login">
+            <div id="text">
+              <p id="LItext"> Login with Facebook, personal account, or as a guest.</p>
+            </div>
+            <div id="LImethods" onClick="">
+            	
+                <article>
+               	  <form>
+                  		<table>
+                        	<tr>
+                            	<td colspan="2">
+                                	<fb:login-button show-faces="true" width="200" max-rows="1" onClick="FBCheck()" id="fb" class="centered">login</fb:login-button>
+                                </td>
+                            </tr>
+                        	<tr>
+                            	<td>
+                                	<label for="email">Email</label>
+                                </td>
+                                                                
+                                <td>
+                                	<input type="text" name="email"/><br/>
+                                </td>
+                            </tr>
+                  			<tr>
+                            	<td>
+                                	<label for="pwd">Password</label>
+                                </td>
+                                
+                                <td>
+                                	<input type="text" name="pwd"/> 
+                                </td>
+                            </tr>  
+                            <tr>
+                            	<td>
+                                	<input type="submit" id="submit" value="Login" name="submit" />
+                                </td>
+                            	<td>
+                                	<p id="rg">Click here to <a href="#">Register</a></p>
+                                </td>
+                            </tr>   
+                            <tr>
+                            	<td colspan="2">
+                                	<p>Or</p>
+                                </td>
+                            </tr>
+                            <tr>
+                            	<td colspan="2">
+                                	<button type="button" id="guest">Continue As Guest</button>
+                                </td>
+                            </tr>
+                                               
+                  </form>
+                </article>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
